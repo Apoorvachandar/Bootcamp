@@ -1,0 +1,24 @@
+1. a. SELECT project_no FROM project JOIN works_on ON project.project_no = works_on.project_no;
+   b. SELECT project_no FROM project NATURAL JOIN works_on ON project.project_no = works_on.project_no;
+   c. SELECT project_no FROM project CROSS JOIN works_on ON project.project_no = works_on.project_no;
+   
+ 2. SELECT emp_no, Job FROM works_on where project_no in (SELECT proj_no FROM project WHERE project_name = 'Gemini');
+ 
+ 3. SELECT firstName, lastName FROM employee where employee_no IN (SELECT employee_no FROM works_on where department_no in (SELECT department_no FROM department WHERE (department_name = 'Research' or department_name= 'Accounting')));
+
+ 4. SELECT enterdates FROM workson INNER JOIN Employee ON workson.employee_no = employee.employee_no  WHERE job = 'clerk' and department_name = 'd1';
+ 
+ 5. SELECT COUNT() enterdates FROM workson INNER JOIN Employee ON workson.employee_no = employee.employee_no  WHERE job = 'clerk' and department_name = 'd1';
+
+ 6. SELECT firstName,lastname FROM employee where employee_no in (SELECT employee_no from works_on WHERE job = 'manager' and project_no ='p2');
+ 
+ 7. SELECT DISTINCT firstName,lastname FROM employee where employee_no in (SELECT employee_no from works_on WHERE COUNT(enter_date)>=2);
+ 
+ 8. SELECT emp_no FROM workson LEFT OUTER JOIN Employee ON workson.dep_name = employee.dp_name  WHERE workson.location = employee.location ;
+ 
+ 
+ 
+
+
+
+
