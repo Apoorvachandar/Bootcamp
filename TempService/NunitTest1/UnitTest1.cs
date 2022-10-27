@@ -15,21 +15,21 @@ namespace UnitTest1
     {
         [Test]
 
-        public void TestCF()
+        public void testCelsiusToFarenheit()
         {
             
             double expected = 32;
-            double actual = temp.CF(0);
+            double actual = temp.CcelsiusToFarenheit(0);
             Assert.AreEqual(expected, actual);
 
         }
 
         [Test]
 
-        public void TestFC()
+        public void testFarenheitToCelsius()
         {
             double expected = 0;
-            double actual = temp.FC(32);
+            double actual = temp.farenheitToCelsius(32);
             Assert.AreEqual(expected, actual);
 
         }
